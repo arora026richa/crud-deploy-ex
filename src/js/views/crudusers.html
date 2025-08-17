@@ -1,0 +1,20 @@
+<oj-form-layout>
+  <oj-input-text label-hint="ID" value="{{id}}"></oj-input-text>
+  <oj-input-text label-hint="Name" value="{{name}}"></oj-input-text>
+  <oj-input-text label-hint="Email" value="{{email}}"></oj-input-text>
+
+  <oj-button on-oj-action="[[addUser]]">Add</oj-button>
+  <oj-button on-oj-action="[[updateUser]]">Update</oj-button>
+  <oj-button on-oj-action="[[deleteUser]]">Delete</oj-button>
+</oj-form-layout>
+
+<oj-table
+  data="[[dataProvider]]"
+  columns='[
+    {"headerText": "ID", "field": "id"},
+    {"headerText": "Name", "field": "name"},
+    {"headerText": "Email", "field": "email"}
+  ]'
+  display="grid"
+  class="oj-sm-12">
+</oj-table>
